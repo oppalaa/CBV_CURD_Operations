@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>Name of the school :{{sclobj.ScName}}</h1>
+    <h1>Principal of the school : {{sclobj.ScPrincipal}}</h1>
+    <h1>Location of the school is :{{sclobj.ScLocation}}</h1>
+
+     <h1>Student Details are{{sclobj.ScName}}</h1>
+
+    {% for i in sclobj.nvn.all %}
+     <h1> name of the student is :{{i.Sname}} </h1>
+     <h1>age of the stundent is :{{i.Sage}}</h1>
+    {% endfor %}
+     
+      <h2> <a href="{% url 'update' pk=sclobj.pk %}">update</a></h2>
+    </center>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>School_List </h1>
+      <ol>
+        {% for school in ALLSO %}
+          <a href="{{school.pk}}"><li><h1>{{school.ScName}}</h1></li></a>
+        {% endfor %}
+      </ol>
+    </center>
+</body>
+</html>
